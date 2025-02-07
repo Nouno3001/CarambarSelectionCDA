@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // *******************************************
 
 // API Render pour récupérer une blague
-const API_URL = "https://mon-api-carambar.onrender.com/api/blagues/random";
-
+// const API_URL = "https://mon-api-carambar.onrender.com/api/blagues/random";
+const API_URL = "https://carambarselectioncda-backend.onrender.com";
 async function getJoke() {
   try {
     let response = await fetch(API_URL);
