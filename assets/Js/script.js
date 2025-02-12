@@ -1,9 +1,18 @@
 // Gestion du menu burger
 const burger = document.querySelector(".burger-menu");
 const nav = document.querySelector("nav");
+const closeButton = document.querySelector(".close-button");
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("active");
+  burger.classList.toggle("active"); // Ajoute la classe active au burger
+  closeButton.classList.toggle("active"); // Ajoute la classe active au bouton de fermeture
+});
+
+closeButton.addEventListener("click", () => {
+  nav.classList.remove("active");
+  burger.classList.remove("active"); // Retire la classe active du burger
+  closeButton.classList.remove("active"); // Retire la classe active du bouton de fermeture
 });
 
 // Gestion de la blague

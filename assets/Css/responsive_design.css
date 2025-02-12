@@ -1,6 +1,9 @@
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 90px;
+    right: 0px;
   }
 
   .burger-menu {
@@ -11,16 +14,30 @@
     height: 40vh; /* Réduit la hauteur de la section hero */
   }
 
+  .hero-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
+    margin-top: 50px;
   }
 
   .hero-content p {
     font-size: 1rem;
+    margin-top: 50px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    height: 30vh; /* Réduit la hauteur de la section hero */
+  }
+
   .hero-content h1 {
     font-size: 1.5rem;
   }

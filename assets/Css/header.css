@@ -4,7 +4,7 @@ header {
   align-items: center;
   background-color: var(--primary-color);
   color: var(--white);
-  padding: var(--padding-lg);
+  padding: var(--padding-lg) 40px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed; /* Fixe le header en haut de l'écran */
   top: 0;
@@ -39,6 +39,8 @@ header {
   text-shadow: 0px 0px 5px var(--secondary-color);
 }
 
+/* Navigation */
+
 nav {
   display: flex;
   align-items: center;
@@ -50,7 +52,9 @@ nav {
 }
 
 .nav-links li {
-  margin-left: var(--padding-md);
+  /* padding: var(--padding-sm); */
+  /* margin-left: var(--padding-md); */
+  margin-left: var(--padding-sm);
 }
 
 .nav-links a {
@@ -64,6 +68,11 @@ nav {
   color: var(--white);
   text-shadow: 0px 0px 1px #333;
   transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--text-color);
+  border-left: 2px solid var(--secondary-color);
 }
 
 /* Menu BURGER */
@@ -84,7 +93,7 @@ nav {
 }
 
 .burger-menu.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(12px) rotate(-45deg);
 }
 
 .burger-menu.active span:nth-child(2) {
@@ -92,5 +101,28 @@ nav {
 }
 
 .burger-menu.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-12px) rotate(45deg);
+}
+
+/* Close Button */
+.close-button {
+  z-index: 10;
+  position: absolute;
+  top: 140px;
+  right: 20px;
+  font-size: 0.7rem;
+  padding: 5px;
+  border: 3px solid var(--primary-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: -25px;
+  border-bottom-left-radius: -25px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  cursor: pointer;
+  display: none; /* Masqué par défaut */
+}
+
+nav.active .close-button {
+  display: block; /* Affiché lorsque le menu est ouvert */
 }
