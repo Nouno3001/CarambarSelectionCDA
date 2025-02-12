@@ -1,0 +1,16 @@
+/* Animation pour le bouton "Obtenir une blague" */
+.hero-content button {
+  animation: buttonAnimation 2s infinite alternate;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

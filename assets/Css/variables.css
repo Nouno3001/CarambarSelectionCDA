@@ -1,0 +1,18 @@
+:root {
+  /* Couleurs */
+  --primary-color: #ffcc00; /* Jaune Carambar */
+  --secondary-color: #800000; /* Marron Carambar */
+  --tertiary-color: #ece691; /* Jaune clair */
+  --background-color: #dcd4b6; /* Beige */
+  --text-color: #333; /* Gris foncé */
+  --white: #fff; /* Blanc */
+
+  /* Police de caractères */
+  --main-font: "Arial", sans-serif;
+
+  /* Dimensions */
+  --max-width: 1200px; /* Largeur maximale du contenu */
+  --padding-lg: 20px;
+  --padding-md: 15px;
+  --padding-sm: 10px;
+}

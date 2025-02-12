@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blagues Carambar</title>
     <script src="./assets/Js/script.js" defer></script>
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+    <link
+      rel="icon"
+      href="./assets/media/smiley-1f605.svg"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./assets/Css/style.css" />
   </head>
   <body>
     <header>
-      <!-- <div class="logo">Carambar Blagues</div> -->
-      <!-- <img
-        src="./assets/media/smiley-1f605.svg"
-        alt="Logo Carambar"
-        class="logo"
-      /> -->
-      <img
-        src="./assets/media/bonbonBlagueur.png"
-        alt="Logo Carambar"
-        class="logo"
-      />
-      <div class="textlogo">Carambar Blagues</div>
+      <div class="logo">
+        <img
+          src="./assets/media/bonbonBlagueur.png"
+          alt="Logo Carambar"
+          class="logo-image"
+        />
+        <span class="logo-text">Carambar Blagues</span>
+      </div>
       <nav>
         <ul class="nav-links">
           <li><a href="#">Accueil</a></li>
@@ -34,9 +36,7 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <!-- Ajout de la section image avec voile -->
       <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -46,12 +46,12 @@
           <p id="jokeDisplay">Cliquez sur le bouton pour voir une blague.</p>
         </div>
       </section>
+      <article class="joke">
+        <!-- Affichage des blagues -->
+      </article>
     </main>
-
     <footer>
       <p>© 2025 Carambar & Co - Tous droits réservés @SEB-Med</p>
     </footer>
-
-    <!-- <script src="./assets/Js/script.js" defer></script> -->
   </body>
 </html>
