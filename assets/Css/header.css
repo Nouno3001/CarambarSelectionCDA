@@ -66,13 +66,13 @@ nav {
 
 .nav-links a:hover {
   color: var(--white);
-  text-shadow: 0px 0px 1px #333;
+  text-shadow: 0px 0px 1px var(--text-color);
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background-color: var(--text-color);
-  border-left: 2px solid var(--secondary-color);
+.nav-links li:hover a {
+  border-bottom: 1px solid var(--secondary-color);
+  /* background-color: var(--text-color); */
 }
 
 /* Menu BURGER */
@@ -125,4 +125,37 @@ nav {
 
 nav.active .close-button {
   display: block; /* Affiché lorsque le menu est ouvert */
+}
+
+/* RESPONSIVE DESIGN */
+/* Pour tablettes et petits écrans */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 160px;
+    right: 20px;
+    background: var(--primary-color);
+    width: 150px;
+    padding: 15px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  nav.active .nav-links {
+    display: flex;
+  }
 }

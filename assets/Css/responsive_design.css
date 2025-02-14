@@ -1,17 +1,59 @@
 @media (max-width: 768px) {
-  .nav-links {
-    display: block;
-    position: absolute;
-    top: 90px;
-    right: 0px;
+  header {
+    padding: 20px 10px;
   }
 
   .burger-menu {
     display: flex;
   }
 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 160px;
+    right: 20px;
+    background: var(--primary-color);
+    width: 150px;
+    padding: 15px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  /* .nav-links {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+  } */
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  nav.active .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+
+  .nav-links li:hover a {
+    border-bottom: none;
+    border-left: 2px solid var(--secondary-color);
+    /* margin: 0 0.5rem; */
+    padding: 0 0.3rem;
+    background-color: var(--tertiary-color);
+  }
+
   .hero {
-    height: 40vh; /* Réduit la hauteur de la section hero */
+    height: 50vh; /* Réduit la hauteur de la section hero */
   }
 
   .hero-content {
@@ -31,6 +73,16 @@
     font-size: 1rem;
     margin-top: 50px;
   }
+
+  .hero-content button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* .hero-content button:hover {
+    background: var(--primary-color);
+    color: var(--white);
+  } */
 }
 
 @media (max-width: 480px) {

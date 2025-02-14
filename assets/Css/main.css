@@ -31,6 +31,11 @@ main {
 
 .hero-content {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--padding-lg);
+  margin-top: 70px; /* Espace entre le header et la section hero */
 }
 
 .hero-content h1 {
