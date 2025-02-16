@@ -30,8 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Envoi d'une requête pour obtenir une blague aléatoire
       // const response = await fetch('/api/jokes/random');
       const response = await fetch(
-        "https://carambarselectioncda-backend.onrender.com/api/blagues/random"
+        "https://official-joke-api.appspot.com/random_joke"
       );
+
       const data = await response.json();
       jokeDisplay.textContent = data.joke;
 
