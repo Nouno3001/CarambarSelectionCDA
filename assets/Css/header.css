@@ -52,9 +52,8 @@ nav {
 }
 
 .nav-links li {
-  /* padding: var(--padding-sm); */
-  /* margin-left: var(--padding-md); */
-  margin-left: var(--padding-sm);
+  margin-left: var(--padding-md);
+  /* margin-left: var(--padding-sm); */
 }
 
 .nav-links a {

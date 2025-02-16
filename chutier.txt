@@ -1,0 +1,49 @@
+
+<pre>
+
+├──projet_selection_CDA_Front/
+│     │── .gitignore
+│     ├── index.html
+│     └── assets/
+│          ├── Css/style.css
+│          ├── Js/script.js
+│        └── media/photos et images
+</pre>
+
+
+
+<pre>
+├── projet_selection_CDA_back/
+│   ├── node_modules
+│   ├── .gitignore
+│   ├── src/
+│   │   ├── app.js│    
+│   │   ├── config/
+│   │   │    ├── bdd.js
+│   │   │    ├── config.json
+│   │   │    ├── config.js
+│   │   ├── controllers/
+│   │   │   ├──jokeController.js
+│   │   ├── models/
+│   │   │   ├── index.js
+│   │   │   ├── Joke.js
+│   │   ├── routes/
+│   │   │    ├── jokeRoutes.js
+│   │   ├── swagger/
+│   │   │    ├── swagger.json
+│   │   ├── views/
+│   │   │   ├── layout/
+│   │   │       ├── main.pug
+│   │   │   ├── partials/
+│   │   │       ├── footer.pug
+│   │   │       ├── header.pug  
+│   │   │   ├── users/
+│   │   │       ├── index.pug
+│   │   │       ├── profile.pug 
+│   │   │   ├── index.pug 
+│   │   ├── .env
+│   │   └── autres fichiers...
+│   ├── package.json
+│   └── readme.md
+
+</pre>

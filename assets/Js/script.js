@@ -17,8 +17,8 @@ closeButton.addEventListener("click", () => {
 
 // Gestion de la blague
 document.addEventListener("DOMContentLoaded", () => {
-  const jokeDisplay = document.getElementById("jokeDisplay");
   const btnJoke = document.getElementById("btnJoke");
+  const jokeDisplay = document.getElementById("jokeDisplay");
   const loadingIndicator = document.createElement("p");
   loadingIndicator.textContent = "Chargement...";
   loadingIndicator.style.display = "none"; // Masqué par défaut
@@ -27,11 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
   btnJoke.addEventListener("click", async () => {
     loadingIndicator.style.display = "block"; // Affiche l'indicateur de chargement
     try {
+      // Envoi d'une requête pour obtenir une blague aléatoire
+      // const response = await fetch('/api/jokes/random');
       const response = await fetch(
         "https://carambarselectioncda-backend.onrender.com/api/blagues/random"
       );
       const data = await response.json();
       jokeDisplay.textContent = data.joke;
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de la récupération de la blague");
+      }
+      const joke = await response.json();
+
+      // Mise à jour du contenu de l'élément jokeDisplay
+      jokeDisplay.textContent = `${joke.question} - ${joke.answer}`;
     } catch (error) {
       console.error("Erreur lors de la récupération de la blague :", error);
       jokeDisplay.textContent = "Impossible de charger une blague.";
