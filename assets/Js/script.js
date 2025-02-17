@@ -51,3 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Path : projet_selection_CDA_Front/assets/Js/script.js
+btnJoke.addEventListener("click", async () => {
+  try {
+    const response = await fetch(
+      "https://carambarselectioncda-backend.onrender.com/api/blagues/random"
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const joke = await response.json();
+    document.getElementById("jokeDisplay").innerText = joke.joke; // Assure-toi que la clé correspond à ta réponse
+  } catch (error) {
+    console.error("Il y a eu un problème avec la requête fetch:", error);
+  }
+});
